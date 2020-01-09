@@ -5,33 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_overview"
+            android:icon="@drawable/ic_view_agenda_black_24dp"
+            android:title="@string/menu_overview" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_day"
+            android:icon="@drawable/ic_view_day_black_24dp"
+            android:title="@string/menu_day" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_week"
+            android:icon="@drawable/ic_view_week_black_24dp"
+            android:title="@string/menu_week" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_month"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="@string/menu_month" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Calendars">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_default_cal"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
+                android:title="@string/menu_default_cal" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:title="@string/menu_cal2" />
         </menu>
     </item>
 
