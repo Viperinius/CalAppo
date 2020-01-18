@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalAppo</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="abbrev_friday">F</string>
+    <string name="abbrev_monday">M</string>
+    <string name="abbrev_saturday">S</string>
+    <string name="abbrev_sunday">S</string>
+    <string name="abbrev_thursday">D</string>
+    <string name="abbrev_tuesday">D</string>
+    <string name="abbrev_wednesday">M</string>
+    <string name="button_notification">Benachrichtigung hinzufügen</string>
+    <string name="button_recurrence">Einmalig</string>
+    <string name="button_save_new">Speichern</string>
+    <string name="hint_description">Beschreibung hinzufügen</string>
+    <string name="hint_location">Ort hinzufügen</string>
+    <string name="hint_title">Titel hinzufügen</string>
+    <string name="menu_day">Tag</string>
+    <string name="menu_default_cal">Standardkalendar</string>
+    <string name="menu_month">Monat</string>
+    <string name="menu_overview">Terminübersicht</string>
+    <string name="menu_week">Woche</string>
+    <string name="nav_header_desc">Kleine Kalenderapp</string>
+    <string name="navigation_drawer_close">Navigation schließen</string>
+    <string name="navigation_drawer_open">Navigation öffnen</string>
+    <string name="switch_all_day">Ganztägig</string>
+    <string name="menu_calendars">Kalender</string>
+    <string name="button_color">Standardfarbe</string>
+</resources>

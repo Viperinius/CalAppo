@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_overview"
+            android:icon="@drawable/ic_view_agenda_black_24dp"
+            android:title="@string/menu_overview" />
+        <item
+            android:id="@+id/nav_day"
+            android:icon="@drawable/ic_view_day_black_24dp"
+            android:title="@string/menu_day" />
+        <item
+            android:id="@+id/nav_week"
+            android:icon="@drawable/ic_view_week_black_24dp"
+            android:title="@string/menu_week" />
+        <item
+            android:id="@+id/nav_month"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="@string/menu_month" />
+    </group>
+
+    <item android:title="@string/menu_calendars">
+        <menu>
+            <item
+                android:id="@+id/nav_default_cal"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_default_cal" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_cal2" />
+        </menu>
+    </item>
+
+</menu>

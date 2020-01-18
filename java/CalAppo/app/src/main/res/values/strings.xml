@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">CalAppo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">@string/app_name</string>
+    <string name="nav_header_subtitle" translatable="false">by Viperinius</string>
+    <string name="nav_header_desc">Small Calendar App</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_calendars">Calendars</string>
+    <string name="menu_overview">Schedule Overview</string>
+    <string name="menu_day">Day</string>
+    <string name="menu_week">Week</string>
+    <string name="menu_month">Month</string>
+    <string name="menu_default_cal">Default calendar</string>
+    <string name="menu_cal2">Calendar 2</string>
+
+    <!--new appointment modal-->
+    <string name="hint_title">Add title</string>
+    <string name="switch_all_day">All day</string>
+    <string name="button_recurrence">Once</string>
+    <string name="button_start_date">Fr., 27. Dez. 2019</string>
+    <string name="button_start_time">00:00</string>
+    <string name="button_end_date">Fr., 27. Dez. 2019</string>
+    <string name="button_end_time">01:00</string>
+    <string name="hint_location">Add location</string>
+    <string name="hint_description">Add description</string>
+    <string name="button_notification">Add notification</string>
+    <string name="button_color">Default colour</string>
+    <string name="button_save_new">Save</string>
+
+    <!--day letters-->
+    <string name="abbrev_monday">M</string>
+    <string name="abbrev_tuesday">T</string>
+    <string name="abbrev_wednesday">W</string>
+    <string name="abbrev_thursday">T</string>
+    <string name="abbrev_friday">F</string>
+    <string name="abbrev_saturday">S</string>
+    <string name="abbrev_sunday">S</string>
+</resources>

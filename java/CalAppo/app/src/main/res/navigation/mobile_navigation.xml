@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_overview">
+
+    <fragment
+        android:id="@+id/nav_overview"
+        android:name="com.viperinius.calappo.ui.overview.OverviewFragment"
+        android:label="@string/menu_overview"
+        tools:layout="@layout/fragment_overview" />
+
+    <fragment
+        android:id="@+id/nav_day"
+        android:name="com.viperinius.calappo.ui.day.DayFragment"
+        android:label="@string/menu_day"
+        tools:layout="@layout/fragment_day" />
+
+    <fragment
+        android:id="@+id/nav_week"
+        android:name="com.viperinius.calappo.ui.week.WeekFragment"
+        android:label="@string/menu_week"
+        tools:layout="@layout/fragment_week" />
+
+    <fragment
+        android:id="@+id/nav_month"
+        android:name="com.viperinius.calappo.ui.month.MonthFragment"
+        android:label="@string/menu_month"
+        tools:layout="@layout/fragment_month" />
+
+    <fragment
+        android:id="@+id/nav_default_cal"
+        android:name="com.viperinius.calappo.ui.share.ShareFragment"
+        android:label="@string/menu_default_cal"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.viperinius.calappo.ui.send.SendFragment"
+        android:label="@string/menu_cal2"
+        tools:layout="@layout/fragment_send" />
+</navigation>

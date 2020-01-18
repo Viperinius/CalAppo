@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="100dp"
+    app:behavior_hideable="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/controls_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/item_vertical_spacing"
+                    android:paddingBottom="@dimen/item_vertical_spacing"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:background="@null"/>
+
+                <!--Spacer-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_save_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/item_vertical_spacing"
+                    android:paddingBottom="@dimen/item_vertical_spacing"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/default_text_size"
+                    android:text="@string/button_save_new" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/controls_layout"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                app:startIconDrawable="@drawable/ic_title_black_24dp"
+                android:hint="@string/hint_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_title_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/divider_1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/title_layout"
+                android:layout_marginTop="@dimen/item_vertical_spacing"
+                android:layout_marginBottom="@dimen/item_vertical_spacing"
+                android:background="@color/colorPrimary"
+                android:importantForAccessibility="no"/>
+            <!--all day-->
+            <ImageView
+                android:id="@+id/img_switch_all_day"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_1"
+                android:layout_alignTop="@id/switch_all_day"
+                android:layout_alignBottom="@id/switch_all_day"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_access_time_black_24dp" />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switch_all_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_1"
+                android:layout_toEndOf="@id/img_switch_all_day"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:checked="false"
+                android:textSize="@dimen/default_text_size"
+                android:text="@string/switch_all_day" />
+            <!--start date-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/img_switch_all_day"
+                android:layout_alignStart="@id/switch_all_day"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_start_date"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/img_switch_all_day"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_start_time"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+            <!--end date-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textview_start_date"
+                android:layout_alignStart="@id/switch_all_day"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_end_date"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textview_start_time"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_end_time"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+            <!--repetitions-->
+            <ImageView
+                android:id="@+id/img_textview_recurrence"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textview_end_date"
+                android:layout_alignTop="@id/textview_recurrence"
+                android:layout_alignBottom="@id/textview_recurrence"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_refresh_black_24dp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_recurrence"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textview_end_date"
+                android:layout_alignStart="@id/switch_all_day"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_recurrence"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:id="@+id/divider_2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/img_textview_recurrence"
+                android:layout_marginTop="@dimen/item_vertical_spacing"
+                android:layout_marginBottom="@dimen/item_vertical_spacing"
+                android:background="@color/colorPrimary"
+                android:importantForAccessibility="no"/>
+            <!--location-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:layout_below="@id/divider_2"
+                app:startIconDrawable="@drawable/ic_add_location_black_24dp"
+                android:hint="@string/hint_location">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_location_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:layout_below="@id/location_layout"
+                app:startIconDrawable="@drawable/ic_short_text_black_24dp"
+                android:hint="@string/hint_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_description_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/divider_3"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/description_layout"
+                android:layout_marginTop="@dimen/item_vertical_spacing"
+                android:layout_marginBottom="@dimen/item_vertical_spacing"
+                android:background="@color/colorPrimary"
+                android:importantForAccessibility="no"/>
+            <!--notification-->
+            <ImageView
+                android:id="@+id/img_textview_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_3"
+                android:layout_alignTop="@id/textview_notification"
+                android:layout_alignBottom="@id/textview_notification"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_notifications_none_black_24dp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_3"
+                android:layout_alignStart="@id/switch_all_day"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_notification"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:id="@+id/divider_4"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/textview_notification"
+                android:layout_marginTop="@dimen/item_vertical_spacing"
+                android:layout_marginBottom="@dimen/item_vertical_spacing"
+                android:background="@color/colorPrimary"
+                android:importantForAccessibility="no"/>
+            <!--colour-->
+            <ImageView
+                android:id="@+id/img_textview_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_4"
+                android:layout_alignTop="@id/textview_color"
+                android:layout_alignBottom="@id/textview_color"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_color_dot" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textview_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_4"
+                android:layout_alignStart="@id/switch_all_day"
+                android:paddingTop="@dimen/item_vertical_spacing"
+                android:paddingBottom="@dimen/item_vertical_spacing"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/button_color"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:id="@+id/divider_5"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/textview_color"
+                android:layout_marginTop="@dimen/item_vertical_spacing"
+                android:layout_marginBottom="@dimen/item_vertical_spacing"
+                android:background="@color/colorPrimaryText"
+                android:importantForAccessibility="no"/>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
