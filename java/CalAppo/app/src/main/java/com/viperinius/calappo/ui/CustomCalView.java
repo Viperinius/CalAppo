@@ -154,11 +154,11 @@ public class CustomCalView extends LinearLayout {
                         */
                         // TODO: draw all events here that do not last multiple days -> if possible???
 
-                        convertView.setBackgroundResource(R.drawable.border_all_sides);
+                        convertView.setBackgroundResource(R.drawable.border_two_sides);
                         break;
                     }
                     else {
-                        convertView.setBackgroundResource(R.drawable.border_all_sides);
+                        convertView.setBackgroundResource(R.drawable.border_two_sides);
                     }
                 }
             }
